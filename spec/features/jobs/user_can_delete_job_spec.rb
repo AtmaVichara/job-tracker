@@ -8,11 +8,10 @@ describe "user can delete a job" do
       job2 = company.jobs.create!(title: "Panda Groomer", city: "Australia", level_of_interest: 90)
 
       visit company_job_path(company, job)
-
       click_on "Delete"
 
-      expect(page).to not_have("Developer")
-      expect(page).to have("Panda Groomer")
+      expect(page).to_not have_link("Developer")
+      expect(page).to have_link("Panda Groomer")
     end
   end
 end
