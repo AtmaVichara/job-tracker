@@ -24,9 +24,9 @@ The rubric below describes additional functionality that you will need to add to
 
 ### Jobs
 
-[ ] A user can update a job
+[X] A user can update a job
 
-[ ] A user can delete a job
+[X] A user can delete a job
 
 ### Categories
 
