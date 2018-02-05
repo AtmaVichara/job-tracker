@@ -9,9 +9,9 @@ describe "user sees all categories" do
 
       visit categories_path
 
-      expect(page).to have_link(category1.title)
-      expect(page).to have_link(category2.title)
-      expect(page).to have_link(category3.title)
+      expect(page).to have_content(category1.title)
+      expect(page).to have_content(category2.title)
+      expect(page).to have_content(category3.title)
     end
   end
 end
