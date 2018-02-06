@@ -10,7 +10,7 @@ describe "a user edits a category" do
       click_on "Edit"
 
       fill_in 'category[title]', with: "Red Panda Grooming"
-      click_on "Edit Category"
+      click_on "Update Category"
 
       expect(page).to have_content("Red Panda Grooming")
     end
