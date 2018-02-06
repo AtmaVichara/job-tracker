@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:edit, :show, :update]
+  before_action :set_category, only: [:edit, :show, :update, :destroy]
 
   def show
   end
@@ -35,6 +35,11 @@ class CategoriesController < ApplicationController
     redirect_to categories_path
   end
 
+  def destroy
+    @category.destroy
+    flash[:success] = "You have successfully deleted the category."
+    redirect_to categories_path
+  end
 
   private
   def category_params
