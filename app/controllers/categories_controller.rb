@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
+  before_action :set_category, only: [:edit, :show, :update]
 
   def show
-    @category = Category.find(params[:id])
   end
 
   def index
@@ -27,17 +27,22 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
-
+    @category.update!(category_params)
+    flash[:success] = "You have successfully updated the category."
+    redirect_to categories_path
   end
-  
+
 
   private
   def category_params
     params.require(:category).permit(:title)
+  end
+
+  def set_category
+    @category = Category.find(params[:id])
   end
 
 end
