@@ -14,10 +14,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
-    if Category.exists?(title: params[:category][:title])
-      redirect_to new_category_path
-      flash[:alert] = "Category already exists! Please try another."
-    elsif @category.save
+    if @category.save
       flash[:success] = "You have successfully created a category"
       redirect_to category_path(@category)
     else
