@@ -3,7 +3,8 @@ require 'rails_helper'
 describe "User sees a specific job" do
   scenario "a user sees a job for a specific company" do
     company = Company.create!(name: "ESPN")
-    job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver")
+    category = Category.create!(title: "Engineering")
+    job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category_id: category.id)
 
     visit company_job_path(company, job)
 
@@ -15,8 +16,9 @@ describe "User sees a specific job" do
   describe "a user links from jobs index" do
     scenario "user sees a job for specific company" do
       company = Company.create!(name: "ESPN")
-      job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver")
-      job2 = company.jobs.create!(title: "Teacher", level_of_interest: 80, city: "Denver")
+      category = Category.create!(title: "Engineering")
+      job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category_id: category.id)
+      job2 = company.jobs.create!(title: "Teacher", level_of_interest: 80, city: "Denver", category_id: category.id)
 
       visit company_jobs_path(company)
 
