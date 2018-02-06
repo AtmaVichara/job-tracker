@@ -1,8 +1,12 @@
 <h1>All Categories</h1>
 
 <% @categories.each do |category| %>
-  <p>
-    <%= category.title %><br>
-    <p> <%= link_to "Edit", edit_category_path(category)%> </p>
-  </p>
+  <div class=<%= category.title %>>
+    <p>
+      <%= category.title %><br>
+      <%= link_to "Delete", category_path(category), method: :delete,
+      data: {confirm: "Do you really wanna delete the category?"}%>
+      <%= link_to "Edit", edit_category_path(category)%>
+    </p>
+  </div>
 <% end %>
