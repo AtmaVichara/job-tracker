@@ -1,0 +1,8 @@
+<h1><%= @category.title %></h1>
+
+
+<% @category.jobs.each do |job| %>
+<p>
+  <%= link_to job.title, company_job_path(job.company, job) %>
+</p>
+<% end %>

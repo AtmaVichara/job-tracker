@@ -1,13 +1,14 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :destroy, :edit, :update]
   before_action :set_company, only: [:destroy, :edit, :update, :create, :new, :index]
+  before_action :set_categories, only: [:new, :create, :edit]
 
   def index
     @jobs = @company.jobs
   end
 
   def new
-    @job = Job.new()
+    @job = Job.new
   end
 
   def create
@@ -50,5 +51,9 @@ class JobsController < ApplicationController
 
   def set_company
     @company = Company.find(params[:company_id])
+  end
+
+  def set_categories
+    @categories = Category.all
   end
 end
