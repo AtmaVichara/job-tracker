@@ -17,3 +17,4 @@ City: <%= @job.city %>
 Company: <%= link_to @job.company.name, company_path(@job.company) %>
 
 <%= render partial: 'comment', collection: @job.comments.reverse %>
+<%= render partial: 'comments/form' %>
