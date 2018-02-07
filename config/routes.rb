@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get '/jobs', to: 'jobs#index'
+
   resources :companies do
     resources :jobs
   end
