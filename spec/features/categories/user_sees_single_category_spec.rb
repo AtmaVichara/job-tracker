@@ -2,12 +2,9 @@ require 'rails_helper'
 
 describe "user sees a category" do
   describe "navigates to categories from index" do
-    before(:each) do
-      @category = create(:category)
-      @company = create(:company)
+    it "user sees all categories and jobs associated" do
       @job = create(:job)
-    end
-    xit "user sees all categories and jobs associated" do
+      @category = Category.find(@job.category.id)
       visit category_path(@category)
 
       expect(page).to have_link(@job.title)
