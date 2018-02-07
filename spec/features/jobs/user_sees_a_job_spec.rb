@@ -9,7 +9,7 @@ describe "User sees a specific job" do
     comment_2 = job.comments.create(author_name: "Bill Cipher", body: "I will rule the world")
 
     visit company_job_path(company, job)
-
+    
     expect(page).to have_content("ESPN")
     expect(page).to have_content("Developer")
     expect(page).to have_content("70")

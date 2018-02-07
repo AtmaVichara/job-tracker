@@ -1,6 +1,8 @@
 <div>
   <h4>Comment by <%= comment.author_name %></h4>
   <p class="comment"><%= comment.body %></p>
-  <p>Comment Created: <%= comment.created_at %></p>
-  <p>Comment Updated: <%= comment.updated_at %></p>
+  <div class="dates">
+    <p>Comment Created: <%= comment.created_at %></p>
+    <p>Comment Updated: <%= comment.updated_at %></p>
+  </div>
 </div>
