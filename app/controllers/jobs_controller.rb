@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   before_action :set_categories, only: [:new, :create, :edit]
 
   def index
-    @jobs = @company.jobs
+    @jobs = Job.all
   end
 
   def new

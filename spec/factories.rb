@@ -1,11 +1,11 @@
 FactoryBot.define do
 
   factory :company do
-    name "Panda Company Inc."
+    sequence(:name) { |n| "Panda Company Inc. Number #{n}"}
   end
 
   factory :category do
-    title "Panda Grooming"
+    sequence(:title) { |n| "Number #{n} Panda Grooming"}
   end
 
   factory :job do
@@ -14,7 +14,18 @@ FactoryBot.define do
     city "Arizona"
     level_of_interest 90
     company
-    category 
+    category
   end
 
+  factory :comment do
+    sequence(:body) { |n| "I can count to #{n}" }
+    job
+  end
+
+  factory :contact do
+    full_name "Garfunkle Davenport IV Esq."
+    position "Emissary of the Red Panda Association"
+    sequence(:email) { |n| "royalpandas#{n}@hotmail.com"}
+    association company
+  end
 end
