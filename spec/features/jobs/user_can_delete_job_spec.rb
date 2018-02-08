@@ -8,7 +8,7 @@ describe "user can delete a job" do
       job = company.jobs.create!(title: "Developer", city: 'Denver', level_of_interest: 60, category_id: category.id)
       job2 = company.jobs.create!(title: "Panda Groomer", city: "Australia", level_of_interest: 90, category_id: category.id)
 
-      visit company_job_path(company, job)
+      visit job_path(job)
       click_on "Delete"
 
       expect(page).to_not have_link("Developer")

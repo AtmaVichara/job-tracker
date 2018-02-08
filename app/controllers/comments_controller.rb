@@ -10,8 +10,8 @@ class CommentsController < ApplicationController
     else
       flash[:alert] = "Error! Comment not posted"
     end
-    
-    redirect_to company_job_path(@job.company, @job)
+
+    redirect_to job_path(@job)
   end
 
   private

@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :destroy, :edit, :update]
-  before_action :set_company, only: [:destroy, :edit, :update, :create, :new]
+  before_action :set_company, only: [:create, :new]
   before_action :set_categories, only: [:new, :create, :edit]
 
   def index
@@ -17,7 +17,7 @@ class JobsController < ApplicationController
     @job.category_id = @category.id
     if @job.save
       flash[:success] = "You created #{@job.title} at #{@company.name}"
-      redirect_to company_job_path(@company, @job)
+      redirect_to job_path(@job)
     else
       render :new
     end
@@ -34,13 +34,13 @@ class JobsController < ApplicationController
   def update
     @job.update!(job_params)
     flash[:success] = "You have successfully edited #{@job.title}"
-    redirect_to company_job_path(@company, @job)
+    redirect_to job_path(@job)
   end
 
   def destroy
     @job.destroy
     flash[:success] = "You have Successfully Deleted the Job #{@job.title}"
-    redirect_to company_jobs_path(@company)
+    redirect_to company_jobs_path(@job.company)
   end
 
   private

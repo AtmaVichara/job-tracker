@@ -2,11 +2,13 @@ Rails.application.routes.draw do
 
   get '/jobs', to: 'jobs#index'
 
-  resources :companies do
+  resources :companies, shallow: true do
     resources :jobs
+    resources :contacts, only: :create
+
   end
 
-  resources :jobs, only: :show do
+  resources :jobs do
     resources :comments, only: :create
   end
 
