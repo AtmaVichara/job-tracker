@@ -3,6 +3,6 @@
 
 <% @category.jobs.each do |job| %>
 <p>
-  <%= link_to job.title, company_job_path(job.company, job) %>
+  <%= link_to job.title, job_path(job) %>
 </p>
 <% end %>

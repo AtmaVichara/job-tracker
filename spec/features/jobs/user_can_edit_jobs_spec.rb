@@ -7,7 +7,7 @@ describe "user can edit job" do
       category = Category.create!(title: "Panda Groomer")
       job = company.jobs.create!(title: "Developer", city: 'Denver', level_of_interest: 60, category_id: category.id)
 
-      visit company_job_path(company, job)
+      visit job_path(job)
 
       click_on "Edit"
 
