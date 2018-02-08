@@ -1,10 +1,14 @@
-All Jobs for <strong><%= @company.name %></strong>
+<strong>All Jobs for <%= @company.name %></strong>
+
+
+<div class="new">
+  <%= link_to "Create New Job", new_company_job_path(@company) %>
+</div>
 
 <% @company.jobs.each do |job| %>
-  <ul><%= link_to job.title, company_path(@company) %> at <%= @company.name %></ul>
+  <ul><strong><%= link_to job.title, company_path(@company) %></strong> at <%= @company.name %></ul>
 <% end %>
 
-<%= link_to "Create New Job", new_company_job_path(@company) %>
 <div class="contacts">
   <%= render partial: "contact", collection: @company.contacts %>
   <%= render partial: 'contacts/form' %>

@@ -5,12 +5,28 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 </head>
 <body>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"><%= link_to "Home", root_path %></a>
+    </div>
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active"><%= link_to "Companies", companies_path %><span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link"><%= link_to "Jobs", jobs_path %></a>
+          <a class="nav-item nav-link"><%= link_to "Categories", categories_path %></a>
+        </div>
+  </div>
+</nav>
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: name %>
   <% end %>
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
+
 
 </body>
 </html>
