@@ -1,0 +1,50 @@
+$light-black: #172121;
+$muted-purple: #444554;
+$light-grey: #7F7B82;
+$light-pink: #BFACB5;
+$light-peach: #E5D0CC;
+
+
+body {
+  background: {
+    size: cover;
+    image: url('ws_Minimal_Gray_to_White_Gradient_1920x1200.jpg');
+  }
+  font-family: Raleway;
+}
+
+h1, h2, h3{
+  color: $light-black;
+  font-size: 24px;
+  margin: 0;
+}
+
+p{
+  color: $muted-purple;
+  a{
+    padding-left: 2px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+ }
+
+
+a:hover {
+  color: $light-pink;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  a{
+       padding-left: 3px;
+  }
+}
+
+.new{
+  display: flex;
+  justify-content: flex-end;
+}

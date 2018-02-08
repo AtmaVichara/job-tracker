@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get '/jobs', to: 'jobs#index'
+  root to: "companies#index"
 
   resources :companies, shallow: true do
     resources :jobs
