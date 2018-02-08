@@ -6,5 +6,6 @@ All Jobs for <strong><%= @company.name %></strong>
 
 <%= link_to "Create New Job", new_company_job_path(@company) %>
 <div class="contacts">
+  <%= render partial: "contact", collection: @company.contacts %>
   <%= render partial: 'contacts/form' %>
 </div>
