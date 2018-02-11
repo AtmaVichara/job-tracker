@@ -39,9 +39,9 @@ The rubric below describes additional functionality that you will need to add to
 [X] The user can view a list of all Categories on a single page, and each Category can be deleted from that page. There is also a link to “Edit” each Category, which takes the user to a form where they can update the Category.
 
 [X] When the user creates a new Job, they are required to select its Category from a drop down menu of existing categories. They also see a link to create a new Category.
-#### Fix Tests and Create a New Job
-[ ] When the user visits a page for a specific Category, they see a list of Jobs in that Category.
-#### Fix Tests and Create a New Job
+
+[X] When the user visits a page for a specific Category, they see a list of Jobs in that Category.
+
 
 ### Comments
 
@@ -55,11 +55,11 @@ The rubric below describes additional functionality that you will need to add to
 
 ### Contacts
 
-[ ] When the user visits the page for a specific Company, in addition to information about the job there is a form that allows them to enter a Contact for that Company (e.g. “Penelope Santorini”, “Hiring Manager”, “penelope@wooo.com”).
+[X] When the user visits the page for a specific Company, in addition to information about the job there is a form that allows them to enter a Contact for that Company (e.g. “Penelope Santorini”, “Hiring Manager”, “penelope@wooo.com”).
 
-[ ] Each Contact has a full name, position, email, and company (which relates to the company you’ve already created). It should be possible for a Company to have more than one Contact, but a Contact only works at one Company.
+[X] Each Contact has a full name, position, email, and company (which relates to the company you’ve already created). It should be possible for a Company to have more than one Contact, but a Contact only works at one Company.
 
-[ ] When the user submits a new contact, they are redirected back to the page for that specific company and the contact appears on the page.
+[X] When the user submits a new contact, they are redirected back to the page for that specific company and the contact appears on the page.
 
 ### Analysis
 
@@ -77,61 +77,68 @@ The rubric below describes additional functionality that you will need to add to
 
 ### Databases
 
-[ ] The database has appropriate tables and columns to create relationships between tables
+[X] The database has appropriate tables and columns to create relationships between tables
 
-[ ] Table and column names follow convention
+[X] Table and column names follow convention
 
 ### Routes
 
 [ ] Routes are defined for all functionality and not any additional functionality
+* I have extraneous routes that are not being used
 
-[ ] All routes conform to RESTful conventions for resources
+[X] All routes conform to RESTful conventions for resources
 
-[ ] Routes to pages that are not specifically for resources stored in the database are not named in a way that an experienced developer would find surprising
+[X] Routes to pages that are not specifically for resources stored in the database are not named in a way that an experienced developer would find surprising
 
 ### Controllers
 
 [ ] The developer has moved logic out of the controllers and into the models/POROs where appropriate.
+* I could have cut down on some of the uneeded jargon in some methods by creating POROs
 
-[ ] The developer uses strong params in a private method
+[X] The developer uses strong params in a private method
 
-[ ] Instance variables being passed to views are appropriately named and limited in number
+[X] Instance variables being passed to views are appropriately named and limited in number
 
 ### ActiveRecord
 
 [ ] ActiveRecord methods are used in models to supply all appropriate functionality
 
-[ ] Methods exist on the appropriate model
+[X] Methods exist on the appropriate model
 
-[ ] Developers are not referencing other classes or `self` in models unnecessarily
+[X] Developers are not referencing other classes or `self` in models unnecessarily
 
 [ ] Ruby enumerables are not used where ActiveRecord methods could provide the necessary functionality
+* While I feel that I used the activerecord methods well, I am confident I could have used more in appropriate places
 
-[ ] Developer can explain the ActiveRecord methods they used and the relationships between ActiveRecord models
+[X] Developer can explain the ActiveRecord methods they used and the relationships between ActiveRecord models
 
 ### Views
 
-[ ] Logic has been removed from views and controllers to the full degree possible
+[X] Logic has been removed from views and controllers to the full degree possible
 
-[ ] Developer ha minimized the number of variables passed to the view
+[X] Developer ha minimized the number of variables passed to the view
 
-[ ] Developer can articulately explain their strategies for extracting this logic
+[X] Developer can articulately explain their strategies for extracting this logic
 
-[ ] Developer uses partials to reduce duplication of code in the view layer
+[X] Developer uses partials to reduce duplication of code in the view layer
 
 ### User Experience
 
-[ ] The application has been styled and the user can easily navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
+[X] The application has been styled and the user can easily navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
+* While the site is rather minimal, there are appropriate links, and a navbar leading back to each index page.
 
 ### Testing
 
-[ ] Project has a running test suite
+[X] Project has a running test suite
 
 [ ] Test suite includes robust feature tests
+* I can not give myself the check here. I may have many tests, but there was no test for deleting categories.
 
 [ ] Test suite includes tests for validations
+* While there were tests for validations they could have been more robust
 
 [ ] Test suite includes tests for methods that they have created on the models
+* There were no model methods so again no check here
 
 ## Extensions:
 
